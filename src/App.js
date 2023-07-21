@@ -9,7 +9,7 @@ function App() {
       .get(
         "https://3idb6ggz4g.execute-api.us-east-2.amazonaws.com/dev/getlast/?region=us-east-2&device_id=C4DD57B0C690"
       )
-      .then((res) => console.log("data recieved", res))
+      .then((res) => setRecords("data recieved", res))
       .catch((err) => setIsError(err.message));
   }, []);
   return (
